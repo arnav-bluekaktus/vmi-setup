@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>VMI Setup</title>
+	<!-- Minified version -->
+<link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+</head>
+<body>
+VMI Setup
+
+<ol>
+<li><p>Install deadsnakes ppa</p>
+<blockquote>
+<p>sudo add-apt-repository ppa:deadsnakes/ppa</p>
+</blockquote>
+</li>
+<li><p>Install python3.7, virtualenv, git, distutils, redis</p>
+<blockquote>
+<p>sudo apt install -y python3.7 virtualenv git python3.7-distutils redis-server screen tmux</p>
+</blockquote>
+</li>
+<li><p>Make folder structure</p>
+<blockquote>
+<p>cd ~ &amp;&amp; mkdir VMI &amp;&amp; cd VMI</p>
+</blockquote>
+</li>
+<li><p>Clone Plan Repo</p>
+<blockquote>
+<p>git clone <a href="https://github.com/BluekaktusIT2022/Plan.git">https://github.com/BluekaktusIT2022/Plan.git</a></p>
+</blockquote>
+</li>
+<li><p>Clone Plan-UI Repo</p>
+<blockquote>
+<p>git clone <a href="https://github.com/BluekaktusIT2022/Plan-UI.git">https://github.com/BluekaktusIT2022/Plan-UI.git</a></p>
+</blockquote>
+</li>
+<li><p>Get python3.7 path</p>
+<blockquote>
+<p>which python3.7</p>
+</blockquote>
+</li>
+<li><p>Make virtualenv</p>
+<blockquote>
+<p>cd Plan &amp;&amp; virtualenv -p &lt;Step 6&gt; bars</p>
+</blockquote>
+</li>
+<li><p>Activate virtualenv bars</p>
+<blockquote>
+<p>source bars/bin/activate</p>
+</blockquote>
+</li>
+<li><p>Switch to branch</p>
+<blockquote>
+<p>git checkout <branch></p>
+</blockquote>
+</li>
+<li><p>Install requirements</p>
+<blockquote>
+<p>python3.7 -m pip install -r requirements.pip</p>
+</blockquote>
+</li>
+<li><p>Deal with errors</p>
+</li>
+<li><p>Copy config</p>
+<blockquote>
+<p>cp api/sample_config.py api/config.py</p>
+</blockquote>
+</li>
+<li><p>Export environment variables</p>
+<blockquote>
+<p>export FLASK_APP=&quot;api/wsgi.py&quot; &amp;&amp; export FLASK_ENV=&quot;development&quot;</p>
+</blockquote>
+</li>
+<li><p>Run Flask</p>
+<blockquote>
+<p>flask run</p>
+</blockquote>
+</li>
+<li><p>Install Node Version Manager</p>
+<blockquote>
+<p>curl -o- <a href="https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh">https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh</a> | bash</p>
+</blockquote>
+</li>
+<li><p>Export Stuff from output of &lt;Step 14&gt;</p>
+</li>
+<li><p>Reload bashrc</p>
+<blockquote>
+<p>source ~/.bashrc</p>
+</blockquote>
+</li>
+<li><p>Make sure nvm is installed</p>
+<blockquote>
+<p>nvm -v</p>
+</blockquote>
+</li>
+<li><p>Install node</p>
+<blockquote>
+<p>nvm install v12.22.9</p>
+</blockquote>
+</li>
+<li><p>Do npm install in Plan-UI folder</p>
+<blockquote>
+<p>npm i</p>
+</blockquote>
+</li>
+<li><p>Do npm start</p>
+<blockquote>
+<p>npm start</p>
+</blockquote>
+</li>
+<li><p>Install mongodb</p>
+<blockquote>
+<p><a href="https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/">https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/</a></p>
+</blockquote>
+</li>
+<li><p>Setup firewall</p>
+</li>
+</ol>
+
+</body>
+</html>
